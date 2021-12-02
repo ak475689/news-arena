@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import {useNavigate} from 'react-router-dom'
+import {useHistory} from 'react-router-dom'
 import {
   Link
 } from "react-router-dom";
 // import { boolLogin } from './login';
 export default function Navbar() {
    
-  const history=useNavigate();
+  const history=useHistory();
     return (
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">

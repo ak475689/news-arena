@@ -1,11 +1,11 @@
 import React,{useState} from 'react';
 // import Register from './register.js';
-import {useNavigate} from 'react-router-dom'
+import {useHistory} from 'react-router-dom'
 import Axios from 'axios'
 var boolLogin=false;
 function Login() {
 
-  const navigate=useNavigate();
+  const navigate=useHistory();
   const [email, setemail] = useState('');
   const [pass, setpass] = useState('');
   const [loginstatus, setloginstatus] = useState('welcome to news app')
