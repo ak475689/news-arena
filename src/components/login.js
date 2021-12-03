@@ -22,8 +22,9 @@ function Login() {
       else{
         boolLogin=true;
         setloginstatus('user found');
-        navigate('/home')
+        navigate.push('/home')
       }
+      // console.log(boolLogin);
     });
   }
   return (
@@ -77,4 +78,4 @@ function Login() {
     </section>
   )
 }
-export  default Login;
+export  {boolLogin,Login};

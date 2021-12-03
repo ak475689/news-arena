@@ -1,9 +1,10 @@
 import React,{useState} from 'react'
-
+import { useHistory } from 'react-router-dom';
 import Axios from 'axios'
 export default function Register() {
   const [email, setemail] = useState('');
   const [password, setpass] = useState('');
+  const navigator=useHistory();
   const register=()=>
   {
     Axios.post('http://localhost:3001/register',
@@ -11,9 +12,13 @@ export default function Register() {
     password:password,
     }).then((response)=>
     {
-      
-    });
 
+    });
+   }
+   const nav=()=>
+   { 
+     alert('succesfully registered u will be redirected to the login page');
+     navigator.push('/');
    }
     return (
         <section className="vh-100" style={{backgroundcolor: "#eee"}}>
@@ -67,7 +72,7 @@ export default function Register() {
                     </div>
                   </div>
 
-                  <div onClick={register} className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                  <div onClick={register,nav} className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                     <button type="button" className="btn btn-primary btn-lg">Register</button>
                   </div>
 

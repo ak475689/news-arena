@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {useHistory} from 'react-router-dom'
+import { boolLogin,Login} from './login';
 import {
   Link
 } from "react-router-dom";
@@ -8,6 +9,7 @@ export default function Navbar() {
    
   const history=useHistory();
     return (
+      
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">News Categories</Link>
@@ -33,13 +35,13 @@ export default function Navbar() {
               </li>
               </ul>
           </div>
-          <div className="d-flex flex-row-reverse bd-highlight">
-              <button  onClick={()=>
-                history.push('/register')}className="btn btn-primary p-2 bd-highlight mx-2">Sign up</button>
-              <button  onClick={()=>
-                history.push('/')}className="btn btn-primary p-2 bd-highlight mx-2">login</button>
-              </div>
+        <div className="d-flex flex-row-reverse bd-highlight">
+        <button  onClick={()=>
+          history.push('/register')}className="btn btn-primary p-2 bd-highlight mx-2">Sign up</button>
+        <button  onClick={()=>
+          history.push('/')}className="btn btn-primary p-2 bd-highlight mx-2">login</button>
         </div>
-      </nav>
-    )
-}
+        </div>
+        </nav>
+      )
+        }
