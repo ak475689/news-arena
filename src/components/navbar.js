@@ -35,9 +35,9 @@ export default function Navbar() {
           </div>
           <div className="d-flex flex-row-reverse bd-highlight">
               <button  onClick={()=>
-                history('/register')}className="btn btn-primary p-2 bd-highlight mx-2">Sign up</button>
+                history.push('/register')}className="btn btn-primary p-2 bd-highlight mx-2">Sign up</button>
               <button  onClick={()=>
-                history('/')}className="btn btn-primary p-2 bd-highlight mx-2">login</button>
+                history.push('/')}className="btn btn-primary p-2 bd-highlight mx-2">login</button>
               </div>
         </div>
       </nav>

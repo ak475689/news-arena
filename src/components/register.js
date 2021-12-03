@@ -11,7 +11,7 @@ export default function Register() {
     password:password,
     }).then((response)=>
     {
-      console.log(response);
+      
     });
 
    }

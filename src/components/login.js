@@ -67,7 +67,7 @@ function Login() {
                 <button  onClick={submitReview} type="button" className="btn btn-primary btn-lg"
                 >Login</button>
                 <p className="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <button onClick={()=>
-                navigate('/register')}> Register </button></p>
+                navigate.push('/register')}> Register </button></p>
               </div>
             </form>
           </div>
